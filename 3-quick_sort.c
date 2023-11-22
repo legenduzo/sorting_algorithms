@@ -33,7 +33,7 @@ int lomuto(int *array, int low, int high, size_t size)
 	array[i] = pivot;
 	if (high != i)
 		print_array(array, size);
-	return i;
+	return (i);
 }
 
 /**
@@ -47,6 +47,7 @@ int lomuto(int *array, int low, int high, size_t size)
 void qs_recursive(int *array, int low, int high, size_t size)
 {
 	int pivot;
+
 	if (low < high)
 	{
 		pivot = lomuto(array, low, high, size);
