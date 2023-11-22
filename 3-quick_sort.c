@@ -31,10 +31,12 @@ int lomuto(int *array, int low, int high, size_t size)
 			i++;
 		}
 	}
-	array[high] = array[i];
-	array[i] = pivot;
 	if (high != i)
+	{
+		array[high] = array[i];
+		array[i] = pivot;
 		print_array(array, size);
+	}
 	return (i);
 }
 
