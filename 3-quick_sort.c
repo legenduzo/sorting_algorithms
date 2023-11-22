@@ -21,11 +21,13 @@ int lomuto(int *array, int low, int high, size_t size)
 	{
 		if (array[j] < pivot)
 		{
-			a = array[i];
-			array[i] = array[j];
-			array[j] = a;
-			if (i != j)
+			if (i < j)
+			{
+				a = array[i];
+				array[i] = array[j];
+				array[j] = a;
 				print_array(array, size);
+			}
 			i++;
 		}
 	}
